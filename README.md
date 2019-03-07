@@ -1,4 +1,4 @@
-# react-native-flip-timer [![Build Status](https://travis-ci.com/pritishvaidya/react-native-flip-timer.svg?branch=master)](https://travis-ci.com/pritishvaidya/react-native-flip-timer) [![CodeFactor](https://www.codefactor.io/repository/github/pritishvaidya/react-native-flip-timer/badge)](https://www.codefactor.io/repository/github/pritishvaidya/react-native-flip-timer) [![Maintainability](https://api.codeclimate.com/v1/badges/997a75c022750058ad6a/maintainability)](https://codeclimate.com/github/pritishvaidya/react-native-flip-timer/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/997a75c022750058ad6a/test_coverage)](https://codeclimate.com/github/pritishvaidya/react-native-flip-timer/test_coverage) [![npm version](https://badge.fury.io/js/react-native-flip-timer.svg)](https://badge.fury.io/js/react-native-flip-timer) [![npm downloads](https://img.shields.io/npm/dt/react-native-flip-timer.svg)](https://npm-stat.com/charts.html?package=react-native-flip-timer&from=2018-02-17&to=2018-12-28) <a href="https://github.com/pritishvaidya/react-native-flip-timer/blob/master/README.md"><img src="https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg" alt="module formats: umd, cjs, esm"></a>
+# react-native-flip-countdown-timer [![Build Status](https://travis-ci.com/pritishvaidya/react-native-flip-countdown-timer.svg?branch=master)](https://travis-ci.com/pritishvaidya/react-native-flip-countdown-timer) [![CodeFactor](https://www.codefactor.io/repository/github/pritishvaidya/react-native-flip-countdown-timer/badge)](https://www.codefactor.io/repository/github/pritishvaidya/react-native-flip-countdown-timer) [![Maintainability](https://api.codeclimate.com/v1/badges/997a75c022750058ad6a/maintainability)](https://codeclimate.com/github/pritishvaidya/react-native-flip-countdown-timer/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/997a75c022750058ad6a/test_coverage)](https://codeclimate.com/github/pritishvaidya/react-native-flip-countdown-timer/test_coverage) [![npm version](https://badge.fury.io/js/react-native-flip-countdown-timer.svg)](https://badge.fury.io/js/react-native-flip-countdown-timer) [![npm downloads](https://img.shields.io/npm/dt/react-native-flip-countdown-timer.svg)](https://npm-stat.com/charts.html?package=react-native-flip-countdown-timer&from=2018-02-17&to=2018-12-28) <a href="https://github.com/pritishvaidya/react-native-flip-countdown-timer/blob/master/README.md"><img src="https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg" alt="module formats: umd, cjs, esm"></a>
 > A Flip timer implementation in React Native
 
 ## Show Cases
@@ -18,7 +18,7 @@ IOS            |  Android
 ### Installation
 
 ```bash
-$ npm i react-native-flip-timer --save
+$ npm i react-native-flip-countdown-timer --save
 ```
 
 ### Basic Usage
@@ -27,7 +27,7 @@ import React, { Component } from 'react';
 import {
   StyleSheet, View, TouchableOpacity, Text,
 } from 'react-native';
-import { CountdownTimer, FlipNumber } from 'react-native-flip-timer';
+import { CountdownTimer, FlipNumber } from 'react-native-flip-countdown-timer';
 
 export default class App extends Component {
   state = {
@@ -103,5 +103,5 @@ const styles = StyleSheet.create({
 
 ## Questions
 
-Feel free to [contact me](mailto:pritishvaidya94@gmail.com) or [create an issue](https://github.com/pritishvaidya/react-native-flip-timer/issues/new)
+Feel free to [contact me](mailto:pritishvaidya94@gmail.com) or [create an issue](https://github.com/pritishvaidya/react-native-flip-countdown-timer/issues/new)
 
