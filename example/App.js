@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 import {
   StyleSheet, View, TouchableOpacity, Text,
 } from 'react-native';
-import { Timer, FlipNumber } from 'react-native-flip-countdown-timer';
+import { CountdownTimer, FlipNumber } from 'react-native-flip-countdown-timer';
 
 const styles = StyleSheet.create({
   container: {
@@ -61,7 +61,7 @@ export default class App extends Component {
     const { play } = this.state;
     return (
       <View style={styles.container}>
-        <Timer time={500} play={play} />
+        <CountdownTimer time={500} play={play} />
         <View style={styles.buttonWrapper}>
           <TouchableOpacity style={styles.button} onPress={this.play}>
             <Text style={styles.text}>{play ? 'Pause' : 'Play'}</Text>
