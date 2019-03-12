@@ -4,7 +4,7 @@
 ## Show Cases
 IOS            |  Android
 :-------------------------:|:-------------------------:
-![IOS](https://media.giphy.com/media/BLs443ghS1AYHZwqc2/giphy.gif)  |  ![Android](https://media.giphy.com/media/vNpcUecdRzYazzhnK1/giphy.gif)
+![IOS](https://media.giphy.com/media/87halfgvRA0rEE6OfQ/giphy.gif)  |  ![Android](https://media.giphy.com/media/3XAbjm59akWOWj88bu/giphy.gif)
 
 ## Getting Started
 
