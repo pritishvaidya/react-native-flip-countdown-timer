@@ -14,15 +14,15 @@ class CountdownTimer extends React.Component {
     hours: 0,
     minutes: 0,
     seconds: 0,
-  }
+  };
 
   componentDidMount() {
-    const { time } = this.props;
-    const { hours, minutes, seconds } = TransformUtils.formatNumberToTime(time);
+    // const { time } = this.props;
+    // const { hours, minutes, seconds } = TransformUtils.formatNumberToTime(time);
     this.setState({
-      hours,
-      minutes,
-      seconds,
+      hours: 10,
+      minutes: 20,
+      seconds: 30,
     });
     this.timer = setInterval(
       () => this.updateTime(),
@@ -53,7 +53,7 @@ class CountdownTimer extends React.Component {
     const { hours, minutes, seconds } = this.state;
     const newState = TransformUtils.subtractTime(hours, minutes, seconds);
     this.setState(prevState => ({ ...prevState, ...newState }));
-  }
+  };
 
   render() {
     const { wrapperStyle, flipNumberProps } = this.props;
