@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 
 import FlipNumber from './flip-number';
 import Separator from './flip-number/separator';
-
 import TransformUtils from '../utils';
-
 import style from './style';
 
 class CountdownTimer extends React.Component {
@@ -14,7 +12,7 @@ class CountdownTimer extends React.Component {
     hours: 0,
     minutes: 0,
     seconds: 0,
-  }
+  };
 
   componentDidMount() {
     const { time } = this.props;
@@ -53,18 +51,18 @@ class CountdownTimer extends React.Component {
     const { hours, minutes, seconds } = this.state;
     const newState = TransformUtils.subtractTime(hours, minutes, seconds);
     this.setState(prevState => ({ ...prevState, ...newState }));
-  }
+  };
 
   render() {
     const { wrapperStyle, flipNumberProps } = this.props;
     const { hours, minutes, seconds } = this.state;
     return (
       <View style={[style.wrapper, wrapperStyle]}>
-        {!!hours && <FlipNumber number={hours} unit="hours" {...flipNumberProps} />}
+        {!!hours && <FlipNumber number={hours} unit="hours" nextUnit={minutes} seconds={seconds} {...flipNumberProps} />}
         <Separator />
-        {!!minutes && <FlipNumber number={minutes} unit="minutes" {...flipNumberProps} />}
+        {!!minutes && <FlipNumber number={minutes} lastUnit={hours} nextUnit={seconds} unit="minutes" {...flipNumberProps} />}
         <Separator />
-        {!!seconds && <FlipNumber number={seconds} unit="seconds" {...flipNumberProps} />}
+        {!!seconds && <FlipNumber number={seconds} lastUnit={minutes} unit="seconds" {...flipNumberProps} />}
       </View>
     );
   }

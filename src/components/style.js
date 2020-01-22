@@ -43,7 +43,7 @@ export default StyleSheet.create({
   },
   separator: {
     marginHorizontal: 5,
-    marginVertical: 10,
+    marginVertical: 6,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
@@ -51,6 +51,6 @@ export default StyleSheet.create({
     height: 5,
     width: 5,
     borderRadius: 5,
-    backgroundColor: '#333333',
+    backgroundColor: '#cccccc',
   },
 });

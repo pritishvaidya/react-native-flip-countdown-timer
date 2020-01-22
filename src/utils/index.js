@@ -74,13 +74,23 @@ function subtractTime(hours, minutes, seconds) {
   seconds -= 1;
 
   if (seconds < 0) {
-    minutes -= 1;
-    seconds = 59;
+    if (minutes <= 0 && hours <= 0) {
+      minutes = 0;
+      seconds = 0;
+    } else {
+      minutes -= 1;
+      seconds = 59;
+    }
   }
 
   if (minutes < 0) {
-    hours -= 1;
-    minutes = 59;
+    if (hours <= 0) {
+      hours = 0;
+      minutes = 0;
+    } else {
+      hours -= 1;
+      minutes = 59;
+    }
   }
   return formatTime(hours, minutes, seconds);
 }
