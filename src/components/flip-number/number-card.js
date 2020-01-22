@@ -3,7 +3,6 @@ import { View, Animated, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
 import style from '../style';
-
 import TransformUtil from '../../utils';
 import FlipCard from './flip-card';
 import Card from './card';
@@ -83,7 +82,7 @@ class NumberCard extends React.Component {
     } = this.props;
     return (
       <View style={[style.numberWrapper,
-        { width: size * 0.8, height: size * 1.2, borderRadius: size / 10 },
+        { width: size, height: size * 1.2, borderRadius: size / 10 },
         numberWrapperStyle]}
       >
         <Card

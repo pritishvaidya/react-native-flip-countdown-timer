@@ -43,7 +43,7 @@ export default StyleSheet.create({
   },
   separator: {
     marginHorizontal: 5,
-    marginVertical: 10,
+    marginVertical: 6,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
