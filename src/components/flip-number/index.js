@@ -9,13 +9,30 @@ import style from '../style';
 
 function FlipNumber({
   number, unit, size, perspective, numberWrapperStyle, cardStyle, flipCardStyle, numberStyle,
+  min, sec,
 }) {
   number = parseInt(number);
-  let previousNumber = number - 1;
-  if (unit !== 'hours') {
-    previousNumber = previousNumber === -1 ? 59 : previousNumber;
-  } else {
-    previousNumber = previousNumber === -1 ? 23 : previousNumber;
+  min = parseInt(min);
+  sec = parseInt(sec);
+
+  let previousNumber = number;
+  if (unit === 'seconds') {
+    if (min === 0 && sec === 0) {
+      previousNumber = 0;
+    } else if (previousNumber === 0) {
+      previousNumber = 59;
+    } else {
+      previousNumber -= 1;
+    }
+  } else if (unit === 'minutes') {
+    if (sec === 0) {
+      previousNumber = 59;
+    }
+  } else { // hour
+    // eslint-disable-next-line no-lonely-if
+    if (min === 0 && number > 0) {
+      previousNumber -= 1;
+    }
   }
   number = number < 10 ? `0${number}` : number;
   previousNumber = previousNumber < 10 ? `0${previousNumber}` : previousNumber;
@@ -64,6 +81,8 @@ FlipNumber.propTypes = {
   cardStyle: PropTypes.object,
   flipCardStyle: PropTypes.object,
   numberStyle: PropTypes.object,
+  min: PropTypes.string,
+  sec: PropTypes.string,
 };
 
 export default FlipNumber;

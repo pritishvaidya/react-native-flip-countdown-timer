@@ -1,7 +1,7 @@
 {
-  "name": "react-native-flip-countdown-timer",
-  "version": "0.0.3",
-  "description": "A Flip countdown timer implementation in React Native",
+  "name": "react-native-flip-countdown-timer-tl43",
+  "version": "0.0.4",
+  "description": "A Flip countdown timer implementation in React Native, modified by TL43",
   "main": "dist/react-native-flip-countdown-timer.cjs.js",
   "jsnext:main": "dist/react-native-flip-countdown-timer.esm.js",
   "module": "dist/react-native-flip-countdown-timer.esm.js",
