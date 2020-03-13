@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import FlipNumber from './flip-number';
-import Separator from './flip-number/separator';
 
 import TransformUtils from '../utils';
 
@@ -60,11 +59,11 @@ class CountdownTimer extends React.Component {
     const { hours, minutes, seconds } = this.state;
     return (
       <View style={[style.wrapper, wrapperStyle]}>
-        {!!hours && <FlipNumber number={hours} unit="hours" {...flipNumberProps} />}
-        <Separator />
-        {!!minutes && <FlipNumber number={minutes} unit="minutes" {...flipNumberProps} />}
-        <Separator />
-        {!!seconds && <FlipNumber number={seconds} unit="seconds" {...flipNumberProps} />}
+        {!!hours && <FlipNumber number={hours} min={minutes} sec={seconds} unit="hours" {...flipNumberProps} />}
+        {/* <Separator /> */}
+        {!!minutes && <FlipNumber number={minutes} min={minutes} sec={seconds} unit="minutes" {...flipNumberProps} />}
+        {/* <Separator /> */}
+        {!!seconds && <FlipNumber number={seconds} min={minutes} sec={seconds} unit="seconds" {...flipNumberProps} />}
       </View>
     );
   }
