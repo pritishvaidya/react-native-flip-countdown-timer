@@ -17,17 +17,19 @@ class CountdownTimer extends React.Component {
   }
 
   componentDidMount() {
-    const { time } = this.props;
+    const { time, play } = this.props;
     const { hours, minutes, seconds } = TransformUtils.formatNumberToTime(time);
     this.setState({
       hours,
       minutes,
       seconds,
     });
-    this.timer = setInterval(
-      () => this.updateTime(),
-      1000,
-    );
+    if (play) {
+      this.timer = setInterval(
+        () => this.updateTime(),
+        1000,
+      );
+    }
   }
 
   shouldComponentUpdate(nextProps) {
