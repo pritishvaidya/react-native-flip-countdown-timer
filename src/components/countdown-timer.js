@@ -60,11 +60,11 @@ class CountdownTimer extends React.Component {
     const { hours, minutes, seconds } = this.state;
     return (
       <View style={[style.wrapper, wrapperStyle]}>
-        {!!hours && <FlipNumber number={hours} unit="hours" {...flipNumberProps} />}
+        {!!hours && <FlipNumber number={hours} {...flipNumberProps} unit="hours" />}
         <Separator />
-        {!!minutes && <FlipNumber number={minutes} unit="minutes" {...flipNumberProps} />}
+        {!!minutes && <FlipNumber number={minutes} {...flipNumberProps} unit="minutes" />}
         <Separator />
-        {!!seconds && <FlipNumber number={seconds} unit="seconds" {...flipNumberProps} />}
+        {!!seconds && <FlipNumber number={seconds} {...flipNumberProps} unit="seconds" />}
       </View>
     );
   }
